@@ -34,6 +34,22 @@ LEAGUES = [
         "url": "https://paradox-a.github.io/bundesliga-tracker/",
         "accent": "#d3010c",
     },
+    {
+        "key": "sa",
+        "name": "Serie A",
+        "country": "Italy",
+        "file": "sa_standings.json",
+        "url": "https://paradox-a.github.io/serie-a-tracker/",
+        "accent": "#0b1c4d",
+    },
+    {
+        "key": "fl1",
+        "name": "Ligue 1",
+        "country": "France",
+        "file": "fl1_standings.json",
+        "url": "https://paradox-a.github.io/ligue1-tracker/",
+        "accent": "#091c3e",
+    },
 ]
 
 TOP_N = 5
