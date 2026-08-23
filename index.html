@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Football Trackers 2026-27</title>
+<style>
+  :root {
+    --bg: #f6f1e7; --card: #ffffff; --text: #1a1a1a; --muted: #6b6b6b; --border: #e2ddd0;
+    --page-accent: #2c2c2c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16131a; --card: #211d29; --text: #f0ede4; --muted: #a39d8f; --border: #3a3444;
+      --page-accent: #f0ede4;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16131a; --card: #211d29; --text: #f0ede4; --muted: #a39d8f; --border: #3a3444;
+    --page-accent: #f0ede4;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 28px 16px 60px; }
+  .wrap { max-width: 900px; margin: 0 auto; }
+  h1 { font-size: 1.7rem; margin-bottom: 4px; color: var(--page-accent); }
+  .updated { color: var(--muted); font-size: 0.85rem; margin-bottom: 24px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+  .card {
+    display: block; background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+    padding: 18px; text-decoration: none; color: var(--text);
+    border-top: 4px solid var(--accent);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+  .card-head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+  .card-head h2 { font-size: 1.15rem; margin: 0 0 2px; color: var(--accent); }
+  .card-head .sub { font-size: 0.78rem; color: var(--muted); }
+  .arrow { font-size: 1.3rem; color: var(--accent); }
+  table { border-collapse: collapse; width: 100%; font-size: 0.82rem; }
+  th, td { padding: 5px 6px; text-align: center; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 600; font-size: 0.68rem; text-transform: uppercase; }
+  td.team, th.team { text-align: left; }
+  .crest { width: 15px; height: 15px; vertical-align: middle; margin-right: 6px; }
+  .pos { font-weight: 700; } .pts { font-weight: 700; }
+  .note { color: var(--muted); font-size: 0.75rem; margin-top: 8px; font-style: italic; }
+  .view-link { margin-top: 12px; font-size: 0.82rem; font-weight: 600; color: var(--accent); }
+  footer { text-align: center; color: var(--muted); font-size: 0.75rem; margin-top: 32px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Football Trackers 2026-27</h1>
+  <div class="updated">Last updated August 23, 2026 04:05 UTC</div>
+  <div class="grid">
+    
+    <a class="card" href="https://paradox-a.github.io/premier-league-tracker/" style="--accent: #37003c;">
+      <div class="card-head">
+        <div>
+          <h2>Premier League</h2>
+          <div class="sub">England · Matchday 1</div>
+        </div>
+        <span class="arrow">→</span>
+      </div>
+      <table>
+        <thead><tr><th>#</th><th class="team">Team</th><th>P</th><th>Pts</th></tr></thead>
+        <tbody>
+        <tr>
+          <td class="pos">1</td>
+          <td class="team"><img src="https://crests.football-data.org/57.png" alt="" class="crest"> Arsenal</td>
+          <td>1</td>
+          <td class="pts">3</td>
+        </tr>
+        <tr>
+          <td class="pos">2</td>
+          <td class="team"><img src="https://crests.football-data.org/402.png" alt="" class="crest"> Brentford</td>
+          <td>1</td>
+          <td class="pts">3</td>
+        </tr>
+        <tr>
+          <td class="pos">3</td>
+          <td class="team"><img src="https://crests.football-data.org/62.png" alt="" class="crest"> Everton</td>
+          <td>1</td>
+          <td class="pts">3</td>
+        </tr>
+        <tr>
+          <td class="pos">4</td>
+          <td class="team"><img src="https://crests.football-data.org/322.png" alt="" class="crest"> Hull City</td>
+          <td>1</td>
+          <td class="pts">3</td>
+        </tr>
+        <tr>
+          <td class="pos">5</td>
+          <td class="team"><img src="https://crests.football-data.org/349.png" alt="" class="crest"> Ipswich Town</td>
+          <td>1</td>
+          <td class="pts">3</td>
+        </tr></tbody>
+      </table>
+      
+      <div class="view-link">View full tracker →</div>
+    </a>
+    <a class="card" href="https://paradox-a.github.io/championship-tracker/" style="--accent: #1a4a8a;">
+      <div class="card-head">
+        <div>
+          <h2>Championship</h2>
+          <div class="sub">England · Matchday 2</div>
+        </div>
+        <span class="arrow">→</span>
+      </div>
+      <table>
+        <thead><tr><th>#</th><th class="team">Team</th><th>P</th><th>Pts</th></tr></thead>
+        <tbody>
+        <tr>
+          <td class="pos">1</td>
+          <td class="team"><img src="https://crests.football-data.org/384.png" alt="" class="crest"> Millwall</td>
+          <td>2</td>
+          <td class="pts">6</td>
+        </tr>
+        <tr>
+          <td class="pos">2</td>
+          <td class="team"><img src="https://crests.football-data.org/348.png" alt="" class="crest"> Charlton</td>
+          <td>2</td>
+          <td class="pts">6</td>
+        </tr>
+        <tr>
+          <td class="pos">3</td>
+          <td class="team"><img src="https://crests.football-data.org/76.png" alt="" class="crest"> Wolverhampton</td>
+          <td>2</td>
+          <td class="pts">4</td>
+        </tr>
+        <tr>
+          <td class="pos">4</td>
+          <td class="team"><img src="https://crests.football-data.org/69.png" alt="" class="crest"> QPR</td>
+          <td>2</td>
+          <td class="pts">4</td>
+        </tr>
+        <tr>
+          <td class="pos">5</td>
+          <td class="team"><img src="https://crests.football-data.org/59.png" alt="" class="crest"> Blackburn</td>
+          <td>2</td>
+          <td class="pts">4</td>
+        </tr></tbody>
+      </table>
+      
+      <div class="view-link">View full tracker →</div>
+    </a>
+    <a class="card" href="https://paradox-a.github.io/laliga-tracker/" style="--accent: #ee8a09;">
+      <div class="card-head">
+        <div>
+          <h2>LaLiga</h2>
+          <div class="sub">Spain · Matchday 2</div>
+        </div>
+        <span class="arrow">→</span>
+      </div>
+      <table>
+        <thead><tr><th>#</th><th class="team">Team</th><th>P</th><th>Pts</th></tr></thead>
+        <tbody>
+        <tr>
+          <td class="pos">1</td>
+          <td class="team"><img src="https://crests.football-data.org/559.png" alt="" class="crest"> Sevilla FC</td>
+          <td>2</td>
+          <td class="pts">6</td>
+        </tr>
+        <tr>
+          <td class="pos">2</td>
+          <td class="team"><img src="https://crests.football-data.org/263.png" alt="" class="crest"> Alavés</td>
+          <td>2</td>
+          <td class="pts">4</td>
+        </tr>
+        <tr>
+          <td class="pos">3</td>
+          <td class="team"><img src="https://crests.football-data.org/80.png" alt="" class="crest"> Espanyol</td>
+          <td>2</td>
+          <td class="pts">3</td>
+        </tr>
+        <tr>
+          <td class="pos">4</td>
+          <td class="team"><img src="https://crests.football-data.org/78.png" alt="" class="crest"> Atleti</td>
+          <td>1</td>
+          <td class="pts">3</td>
+        </tr>
+        <tr>
+          <td class="pos">5</td>
+          <td class="team"><img src="https://crests.football-data.org/86.png" alt="" class="crest"> Real Madrid</td>
+          <td>1</td>
+          <td class="pts">3</td>
+        </tr></tbody>
+      </table>
+      
+      <div class="view-link">View full tracker →</div>
+    </a>
+    <a class="card" href="https://paradox-a.github.io/bundesliga-tracker/" style="--accent: #d3010c;">
+      <div class="card-head">
+        <div>
+          <h2>Bundesliga</h2>
+          <div class="sub">Germany · Matchday 1</div>
+        </div>
+        <span class="arrow">→</span>
+      </div>
+      <table>
+        <thead><tr><th>#</th><th class="team">Team</th><th>P</th><th>Pts</th></tr></thead>
+        <tbody>
+        <tr>
+          <td class="pos">1</td>
+          <td class="team"><img src="https://crests.football-data.org/1.png" alt="" class="crest"> 1. FC Köln</td>
+          <td>0</td>
+          <td class="pts">0</td>
+        </tr>
+        <tr>
+          <td class="pos">2</td>
+          <td class="team"><img src="https://crests.football-data.org/28.png" alt="" class="crest"> Union Berlin</td>
+          <td>0</td>
+          <td class="pts">0</td>
+        </tr>
+        <tr>
+          <td class="pos">3</td>
+          <td class="team"><img src="https://crests.football-data.org/15.png" alt="" class="crest"> Mainz</td>
+          <td>0</td>
+          <td class="pts">0</td>
+        </tr>
+        <tr>
+          <td class="pos">4</td>
+          <td class="team"><img src="https://crests.football-data.org/2.png" alt="" class="crest"> Hoffenheim</td>
+          <td>0</td>
+          <td class="pts">0</td>
+        </tr>
+        <tr>
+          <td class="pos">5</td>
+          <td class="team"><img src="https://crests.football-data.org/3.png" alt="" class="crest"> Leverkusen</td>
+          <td>0</td>
+          <td class="pts">0</td>
+        </tr></tbody>
+      </table>
+      <div class="note">Season hasn't started yet</div>
+      <div class="view-link">View full tracker →</div>
+    </a>
+  </div>
+  <footer>Data: football-data.org · Each card links to its full tracker (table, club stats, player stats)</footer>
+</div>
+</body>
+</html>
