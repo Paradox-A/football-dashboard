@@ -50,6 +50,14 @@ LEAGUES = [
         "url": "https://paradox-a.github.io/ligue1-tracker/",
         "accent": "#091c3e",
     },
+    {
+        "key": "cl",
+        "name": "UEFA Champions League",
+        "country": "Europe",
+        "file": "cl_standings.json",
+        "url": "https://paradox-a.github.io/champions-league-tracker/",
+        "accent": "#0a1a5c",
+    },
 ]
 
 TOP_N = 5

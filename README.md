@@ -1,12 +1,13 @@
 # Football Trackers 2026-27 — Dashboard
 
-A single landing page linking out to all six season trackers:
+A single landing page linking out to all seven season trackers:
 - [Premier League](https://paradox-a.github.io/premier-league-tracker/)
 - [Championship](https://paradox-a.github.io/championship-tracker/)
 - [LaLiga](https://paradox-a.github.io/laliga-tracker/)
 - [Bundesliga](https://paradox-a.github.io/bundesliga-tracker/)
 - [Serie A](https://paradox-a.github.io/serie-a-tracker/)
 - [Ligue 1](https://paradox-a.github.io/ligue1-tracker/)
+- [UEFA Champions League](https://paradox-a.github.io/champions-league-tracker/)
 
 Each card shows a top-5 standings snapshot and current matchday, pulled independently from football-data.org — this page doesn't depend on the other six repos being fetched or up to date, it fetches its own lightweight standings-only snapshot.
 
