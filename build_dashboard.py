@@ -1,5 +1,5 @@
 import json
-from datetime import datetime, timezone
+from datetime import datetime, timezone, date
 
 LEAGUES = [
     {
@@ -68,12 +68,18 @@ def load_table(path):
     table = sorted(table, key=lambda t: (t["position"], -t["points"], -t["goalDifference"]))
     for i, t in enumerate(table, start=1):
         t["displayPos"] = i
-    matchday = data["season"]["currentMatchday"]
+    season = data["season"]
+    matchday = season["currentMatchday"]
     season_started = any(t["playedGames"] > 0 for t in table)
-    return table, matchday, season_started
+    # football-data.org's standings endpoint falls back to the last loaded
+    # season if the upcoming one's fixtures aren't published yet — detect
+    # that rather than showing a past season as if it were current.
+    stale_season = date.fromisoformat(season["endDate"]) < date.today()
+    season_label = f"{season['startDate'][:4]}-{season['endDate'][2:4]}"
+    return table, matchday, season_started, stale_season, season_label
 
 def card_html(league):
-    table, matchday, started = load_table(league["file"])
+    table, matchday, started, stale, season_label = load_table(league["file"])
     rows = []
     for t in table[:TOP_N]:
         rows.append(f"""
@@ -83,13 +89,18 @@ def card_html(league):
           <td>{t['playedGames']}</td>
           <td class="pts">{t['points']}</td>
         </tr>""")
-    status_note = "" if started else '<div class="note">Season hasn\'t started yet</div>'
+    if stale:
+        status_note = f'<div class="note">⚠ 2026-27 not started yet — showing final {season_label} standings for reference</div>'
+        sub_label = "Season not yet started"
+    else:
+        status_note = "" if started else '<div class="note">Season hasn\'t started yet</div>'
+        sub_label = f"Matchday {matchday}"
     return f"""
     <a class="card" href="{league['url']}" style="--accent: {league['accent']};">
       <div class="card-head">
         <div>
           <h2>{league['name']}</h2>
-          <div class="sub">{league['country']} · Matchday {matchday}</div>
+          <div class="sub">{league['country']} · {sub_label}</div>
         </div>
         <span class="arrow">→</span>
       </div>
