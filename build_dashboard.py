@@ -64,6 +64,10 @@ TOP_N = 5
 
 def load_table(path):
     data = json.load(open(path))
+    if "standings" not in data:
+        # New season loaded but zero matches played yet -- the API 404s
+        # instead of returning an empty table (no season/team data at all).
+        return None, None, False, False, "2026-27"
     table = data["standings"][0]["table"]
     table = sorted(table, key=lambda t: (t["position"], -t["points"], -t["goalDifference"]))
     for i, t in enumerate(table, start=1):
@@ -80,6 +84,19 @@ def load_table(path):
 
 def card_html(league):
     table, matchday, started, stale, season_label = load_table(league["file"])
+    if table is None:
+        return f"""
+    <a class="card" href="{league['url']}" style="--accent: {league['accent']};">
+      <div class="card-head">
+        <div>
+          <h2>{league['name']}</h2>
+          <div class="sub">{league['country']} · Season not yet started</div>
+        </div>
+        <span class="arrow">→</span>
+      </div>
+      <div class="note">{season_label} fixtures are loaded, but no matches played yet — no table to show</div>
+      <div class="view-link">View full tracker →</div>
+    </a>"""
     rows = []
     for t in table[:TOP_N]:
         rows.append(f"""
